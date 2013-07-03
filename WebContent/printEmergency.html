@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link rel="stylesheet" type="text/css" href="./css/styleAdmin.css" />
-		<title>Imprimir Presupuesto</title>	
+		<title>Imprimir Emergencia</title>	
 		<script type="text/javascript">
 		
 		function printPageContentB() {
@@ -50,24 +50,22 @@
         </div>  
 		
 		<br>
-		<div id="title" style="font-size:16px; font-weight: bold; text-align:right;"> Fecha: 17/06/2013 </div>
-		<div id="title" style="font-size:16px; font-weight: bold;"> Presupuesto n° 1001 </div>
+		<div id="title" style="font-size:16px; font-weight: bold; text-align:right;"> Fecha: 20/06/2013 07:35 AM</div>
+		<div id="title" style="font-size:16px; font-weight: bold;"> Emergencia n° 1001 </div>
 		<br>
 		
 		<h3>Datos Paciente</h3>
 		<fieldset>
 			<label for="name" class="etiq"><span id="idCard">Cédula de Identidad: </span></label>V-12345678<br>
 			<label for="name" class="etiq"><span id="idCard">Nombre: </span></label>Ana Rojas<br>					
-			<label for="name" class="etiq"><span id="idCard">Médico Tratante: </span></label>Ricardo García<br>
-			<label for="name" class="etiq"><span id="idCard">Departamento: </span></label>Cirugía<br>
-			<label for="name" class="etiq"><span id="idCard">Responsable del Pago: </span></label>Seguros La Previsora<br> 
+			<label for="name" class="etiq"><span id="idCard">Fecha de Ingreso: </span></label>20/06/2013 07:35 AM<br>
+			<label for="name" class="etiq"><span id="idCard">Ubicación: </span></label>Planta Baja<br>
+			<label for="name" class="etiq"><span id="idCard">Cama: </span></label>Camilla 1<br> 
 		</fieldset>
 		<br>
 		<h3>Protocolos</h3>
 		<fieldset>
-			<label for="name" class="etiq"><span id="idCard"></span></label>* Histerectomía<br>
-			<label for="name" class="etiq"><span id="idCard"></span></label>* Colecistectomía<br>
-			<label for="name" class="etiq"><span id="idCard"></span></label>* Apendicectomía<br>
+			<label for="name" class="etiq"><span id="idCard"></span></label>* Emergencia<br>
 		</fieldset>
 		<br>
 		<h3>Servicios</h3>
@@ -78,24 +76,49 @@
 					<th>Precio</th>
 				</tr>				
 				<tr>
-					<td>Hospitalización</td>
-					<td>Bs 3472,00</td>
+					<td>Consulta de Emergencia</td>
+					<td>Bs 993,60</td>
 				</tr>				
 				<tr>
-					<td>Anestesia Peridural</td>
-					<td>Bs 2727,50</td>
+					<td>Honorario Equipo de Emergencia</td>
+					<td>Bs 329,60</td>
 				</tr>				
 				<tr>
 					<td>Servicios Médicos</td>
-					<td>Bs 1021,90</td>
+					<td>Bs 2572,45</td>
 				</tr>				
 				<tr id="totalTr">
 					<td>*** MONTO TOTAL ***</td>
-					<td>Bs 7221,40</td>
+					<td>Bs 3898,65</td>
 				</tr>
 			</tbody>
-			</table>	
-		
+		</table>			
+		<br>
+		<h3>Suminitros</h3>
+		<table id="sweetTable">
+			<tbody>
+				<tr>
+					<th>Suministro</th>
+					<th>Cantidad</th>
+				</tr>				
+				<tr>
+					<td>Guantes de Examen N/Esteril M</td>
+					<td>1</td>
+				</tr>				
+				<tr>
+					<td>Alcohol</td>
+					<td>1</td>
+				</tr>				
+				<tr>
+					<td>Algodón</td>
+					<td>3</td>
+				</tr>				
+				<tr>
+					<td>Sábanas de Camilla</td>
+					<td>1</td>
+				</tr>
+			</tbody>
+		</table>
 		<br>
 		<div id="botonera">
 				<form onsubmit="printPageContentB();">
