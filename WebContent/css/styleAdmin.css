@@ -1275,7 +1275,8 @@ div.box {
 		
 	}
 	
-	#deleteUser, #deleteProduct, #deleteRequest, #refreshUser, #dischargeUser, #hospitalizeUser {
+	#deleteUser, #deleteProduct, #deleteRequest, #refreshUser, #dischargeUser, #hospitalizeUser, #deleteService, #deleteProtocol, #deleteSupply,
+	#deleteEvaluation, #deleteVitalSign {
 		position: absolute;
 		text-align: center;
 		width: 295px;

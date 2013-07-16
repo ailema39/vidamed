@@ -7,11 +7,30 @@
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/ui-lightness/jquery-ui.css" />
 	  	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script type="text/javascript" language="javascript" src="./js/jquery.leanModal.min.js"></script>
 		<link rel="stylesheet" href="/resources/demos/style.css" />
 		<script>
 			$(function() {
 				$( "#tabs" ).tabs();
 			});
+		</script>
+		<script type="text/javascript">
+		var idUser;
+				
+		$(function() {
+			$('a[rel*=leanModal]').leanModal({ top : 200, closeButton: ".close_x" });		
+		});
+		
+		function loadVars(var1, var2) {
+			idUser = var1;
+			$('.cliente').text(var2);
+			
+		};
+		
+		function setV(f){
+			f.elements['userId'].value = idUser;
+			return true;
+		}
 		</script>
 	</head>
 	<body>
@@ -103,13 +122,30 @@
 				<div id="botonP">
 							<input type="submit"  class="button"  name="sbmtButton" value="Imprimir" style="margin-left:30%; margin-top: 5px;"/>
 				</div>	
-				</form>
-				<form>
-					<div id="botonV" style="position:relative; margin-left: 250px; top: -22px;">
-							<input type="button" class="button" value="Actualizar" style="margin-left:40%;" />		
-					</div>	
-				</form>
+				</form>				
+				<div id="botonV" style="position:relative; margin-left: 250px; top: -22px;">
+					<a id="go" rel="leanModal" href="#refreshUser" style="color: #f7941e; font-weight: bold;" 
+											onclick="return loadVars(1003,'1003');" >
+						<input type="button" class="button" value="Actualizar" style="margin-left:40%;" />			
+					</a>
+				</div>
 			</div>	
+			</div>
+		</div>
+		<div id="refreshUser">
+			<div id="signup-ct">
+				<h3 id="see_id" class="sprited" > Actualizar Presupuesto</h3>
+				<br><br>
+				<span>¿Desea actualizar fecha y costos del presupuesto seleccionado? </span> <br><br>
+				<div id="signup-header">
+					<a class="close_x" id="close_x"  href="#"></a>
+				</div>
+				<form action="estimations.html" method="post"  onsubmit="return setV(this)">
+					<input type="hidden" id="userId" class="good_input" name="userId"  value=""/>
+					<div class="btn-fld">
+						<input type="submit"  class="buttonPopUpDelete"  name="sbmtButton" value="Aceptar"  />
+					</div>
+		 		</form>
 			</div>
 		</div>
 	</body>
